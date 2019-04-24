@@ -1,12 +1,13 @@
 import React from "react";
 
-const BeyCard = () => {
+const BeyCard = (props) => {
+  
   return (
     <div>
-      <h3>{/*Bey name goes here*/}</h3>
-      {/*image tag goes here*/}
+      <h3>{props.name}</h3>
+      <img alt={props.name} src={props.img} onClick={() => {props.handleClick(props.beyId)}}/>
     </div>
   );
-};
+}
 
 export default BeyCard;
